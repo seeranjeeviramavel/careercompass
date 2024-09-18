@@ -46,50 +46,6 @@ export const apiRequest = async ({ url, token, method, data }) => {
   }
 };
 
-export const handleFileUpload = async (file) => {
-  const formData = new FormData();
-  formData.append("file", file);
-  formData.append("upload_preset", "careercompass");
-  try {
-    const result = await axios.post(
-      "https:/api.cloudinary.com/v1_1/df6a6t0wt/image/upload",
-      formData,
-      {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      }
-    );
-    return result.data.secure_url;
-  } catch (error) {
-    const err = error.response.data;
-    console.error(error);
-    return { status: err.success, message: err.message };
-  }
-};
-
-export const handleFileUploadResume = async (file) => {
-  const formData = new FormData();
-  formData.append("file", file);
-  formData.append("upload_preset", "careercompass");
-  try {
-    const result = await axios.post(
-      "https:/api.cloudinary.com/v1_1/df6a6t0wt/resume/upload",
-      formData,
-      {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      }
-    );
-    return result.data.secure_url;
-  } catch (error) {
-    const err = error.response.data;
-    console.error(error);
-    return { status: err.success, message: err.message };
-  }
-};
-
 export const fileConverter = async (fileItem) => {
   const file = fileItem[0].file;
   if (file) {
