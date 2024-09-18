@@ -19,12 +19,16 @@ app.use(
     keys: [process.env.JWT_SECRET_KEY],
   })
 );
-app.use(cors());
+app.use(cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  }));
 app.use(xss());
 app.use(mongoSanitize());
 app.use(express.json({ limit: "20mb" }));
 app.use(express.urlencoded({ extended: true, limit: "20mb" }));
 app.use(morgan("dev"));
+app.options("*", cors());
 app.use(router);
 app.use(errorMiddleWare);
 
