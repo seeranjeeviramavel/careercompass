@@ -1,0 +1,65 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs
+*.log
+logs/*.log
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Coverage directories
+coverage/
+
+# Production directories
+/build
+/dist
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables file
+.env
+.env.local
+.env.*.local
+
+# Parcel-bundler cache (if using Parcel)
+.cache
+
+# Mac system files
+.DS_Store
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# React files
+/build
+/.cache
+/src/*.js.map
+
+# Express specific
+*.log
+logs/
+pids/
+*.pid.lock
+
+# Testing
+coverage/
