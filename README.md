@@ -31,7 +31,7 @@
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/career-compass.git
+    git clone [https://github.com/seeranjeeviramavel/career-compass](https://github.com/seeranjeeviramavel/careercompass).git
     cd career-compass
     ```
 
